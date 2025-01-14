@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCases\Clients\GetAll\NovaPasta\**" />
+    <Compile Remove="UseCases\Clients\NovaPasta1\**" />
+    <Content Remove="UseCases\Clients\GetAll\NovaPasta\**" />
+    <Content Remove="UseCases\Clients\NovaPasta1\**" />
+    <EmbeddedResource Remove="UseCases\Clients\GetAll\NovaPasta\**" />
+    <EmbeddedResource Remove="UseCases\Clients\NovaPasta1\**" />
+    <None Remove="UseCases\Clients\GetAll\NovaPasta\**" />
+    <None Remove="UseCases\Clients\NovaPasta1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
