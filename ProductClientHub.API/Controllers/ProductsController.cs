@@ -22,5 +22,17 @@ namespace ProductClientHub.API.Controllers
 
             return Created(string.Empty, response);
         }
+        [HttpDelete]
+        [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorMessageJson), StatusCodes.Status404NotFound)]
+        public IActionResult Delete([FromRoute] Guid id)
+        {
+            var useCase = new DeleteProductUseCase();
+
+            useCase.Execute(id);
+
+            return NoContent();
+        }
     }
 }
